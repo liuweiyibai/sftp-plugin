@@ -128,7 +128,6 @@ class SftpPlugin {
 
   async uploadFileToSftp(files) {
     // 传输文件到服务器
-
     for (const localSrc of files) {
       const targetSrc = localSrc.replace(
         this.dir.replace(/\\/g, "/"),
