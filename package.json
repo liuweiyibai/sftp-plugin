@@ -1,9 +1,14 @@
 {
-  "name": "sftp-upload",
-  "version": "1.0.0",
-  "description": "sftp ssh 上传文件",
+  "name": "folder-sftp-upload",
+  "version": "1.0.3",
+  "description": "sftp ssh 上传文件夹",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hotblin/sftp-upload.git"
+  },
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

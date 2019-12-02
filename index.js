@@ -31,11 +31,11 @@ class SftpPlugin {
 
   constructor({
     dir = "./dist/",
-    url = "/usr/share/nginx/html/ssh2-upload-test/",
-    host = "123.59.136.8",
+    url = "/www/",
+    host = "192.168.0.1",
     port = "22",
-    username = "root",
-    password = `PP3fIhU\$R7Dd`,
+    username = "username",
+    password = "password",
     filterFile = null
   } = {}) {
     // constructor是一个构造方法，用来接收类参数
