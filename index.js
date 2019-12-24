@@ -76,11 +76,11 @@ class SftpPlugin {
       .connect(this.config)
       .then(() => {
         // 连接服务器
-        blueLog(`connect successful->`);
+        blueLog(`连接成功...`);
         sftp
           .list(this.url)
           .then(list => {
-            blueLog(`clear remote files->`);
+            blueLog(`正在清理文件...`);
             this.deleteServerFile(list).then(() => {
               this.globLocalFile();
             });
@@ -158,5 +158,3 @@ class SftpPlugin {
 }
 
 module.exports = SftpPlugin;
-// const sp = new SftpPlugin();
-// sp.start();
