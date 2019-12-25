@@ -36,6 +36,7 @@ class SftpPlugin {
     port = "22",
     username = "username",
     password = "password",
+    readyTimeout = 20000,
     filterFile = null
   } = {}) {
     // constructor是一个构造方法，用来接收类参数
@@ -46,10 +47,11 @@ class SftpPlugin {
     this.startTime = new Date().getTime(); // 开始时间
     this.endTime = null;
     this.config = {
-      host: host, // 服务器地址
-      port: port,
-      username: username,
-      password: password
+      host, // 服务器地址
+      port,
+      username,
+      password,
+      readyTimeout
     };
   }
 

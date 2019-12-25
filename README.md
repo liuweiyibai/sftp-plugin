@@ -8,3 +8,9 @@ const config = {};
 const sp = new SftpPlugin({ ...config });
 sp.start();
 ```
+
+## npm 发布
+
+```bash
+npm login # ormoots
+```
