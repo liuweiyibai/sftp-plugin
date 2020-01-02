@@ -39,15 +39,13 @@ class SftpPlugin {
     readyTimeout = 20000,
     filterFile = null
   } = {}) {
-    // constructor是一个构造方法，用来接收类参数
-
     this.url = url;
     this.dir = dir;
     this.filterFile = filterFile;
-    this.startTime = new Date().getTime(); // 开始时间
+    this.startTime = null;
     this.endTime = null;
     this.config = {
-      host, // 服务器地址
+      host,
       port,
       username,
       password,
@@ -56,13 +54,13 @@ class SftpPlugin {
   }
 
   start() {
-    this.start = new Date().getTime(); // 开始时间
+    this.startTime = new Date().getTime(); // 开始时间
     this.put();
   }
 
   end() {
-    this.end = new Date().getTime();
-    const timeDiff = this.end - this.start;
+    this.endTime = new Date().getTime();
+    const timeDiff = this.endTime - this.startTime;
     const time = genMissionTime(timeDiff);
     blueLog(`任务耗时:${time}`);
   }
@@ -139,7 +137,6 @@ class SftpPlugin {
       if (fs.lstatSync(localSrc).isDirectory()) {
         // 是文件夹
         await sftp.mkdir(targetSrc);
-        // console.log(`uploading: ${localSrc}->${targetSrc}`);
       } else {
         await sftp.put(localSrc, targetSrc);
       }
