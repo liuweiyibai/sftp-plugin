@@ -1,10 +1,10 @@
 {
-  "name": "folder-sftp-upload",
-  "version": "1.0.5",
-  "description": "sftp ssh 上传文件夹",
+  "name": "sftp-plugin",
+  "version": "0.0.1",
+  "description": "sftp ssh 上传文件或者文件夹",
   "repository": {
     "type": "git",
-    "url": "git@github.com:hotblin/sftp-upload.git"
+    "url": "git@github.com:hotblin/sftp-plugin.git"
   },
   "main": "index.js",
   "scripts": {

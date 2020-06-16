@@ -1,4 +1,4 @@
-# nodejs sftp 文件
+# nodejs sftp 上传文件或者文件
 
 ## 用法
 
