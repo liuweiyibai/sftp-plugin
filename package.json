@@ -1,6 +1,6 @@
 {
   "name": "sftp-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "sftp ssh 上传文件或者文件夹",
   "repository": {
     "type": "git",
